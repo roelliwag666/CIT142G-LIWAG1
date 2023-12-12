@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liwag's Product Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Montserrat:ital,wght@0,700;1,500&family=Noto+Serif:ital@1&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet" />
+  <style>
+    :root {
+      --white: hsl(0, 0%, 100%);
+      --text: hsl(228, 12%, 48%);
+      --pale: hsl(32, 37%, 92%);
+      --green: hsl(158, 36%, 37%);
+      --header-text: hsl(212, 21%, 14%);
+    }
+
+    * {
+      margin: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--pale);
+    }
+
+    #header-img {
+      width: 60px;
+      object-fit: contain;
+    }
+
+    #nav-bar {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background-color: var(--white);
+      padding: 10px;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      padding: 0 10px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .the-product {
+      font-size: 25px;
+      margin-left: 10px;
+      font-weight: 700;
+      font-family: "montserrat";
+    }
+
+    #email-section {
+      margin-top: 100px;
+    }
+
+    input {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid var(--green);
+    }
+
+    #submit {
+      background-color: var(--green);
+      color: var(--white);
+      cursor: pointer;
+    }
+
+    section::before {
+      display: block;
+      content: "";
+      margin-top: -100px;
+      height: 100px;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    section {
+      margin: 400px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-family: "fraunces";
+      margin-bottom: 10px;
+    }
+
+    .icon {
+      color: var(--green);
+      margin-right: 30px;
+    }
+
+    #features {
+      text-align: left;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 20px;
+      font-family: "montserrat";
+    }
+
+    #video {
+      width: 50%;
+    }
+
+    .product-image {
+      width: 100%;
+      margin: auto;
+      height: 500px;
+      border: 1px solid var(--text);
+      border-radius: 10px 0 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .product1 {
+      background-image: url("https://api.themarketplace.com.ph/storage/uploads/Gold%20Standard%20Smoked%20Salmon%20Slices%20GS%20100g_1600847428_thumbnail.png")
+    }
+
+    .product2 {
+      background-image: url("https://api.themarketplace.com.ph/storage/uploads/European%20Items-12_1598510074.png")
+    }
+
+    .product3 {
+      background-image: url("https://api.themarketplace.com.ph/storage/uploads/Wagyu%20Beef%20Burger%20Patties%20Unseasoned_1594112979.png")
+    }
+
+    .card {
+      background-color: var(--white);
+      border-radius: 10px;
+      width: 90%;
+      margin: auto;
+      margin-bottom: 10px;
+    }
+
+    .inner-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 10px;
+    }
+
+    .content {
+      font-family: "montserrat";
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+
+    .flex {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .main-price {
+      margin-right: 20px;
+      font-size: 30px;
+      font-family: "fraunces";
+      color: var(--green);
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: var(--text);
+    }
+
+    .author {
+      font-family: "montserrat";
+      letter-spacing: 5px;
+      color: var(--text);
+      text-transform: uppercase;
+    }
+
+    .header {
+      font-family: "fraunces";
+      margin: 10px 0;
+      color: var(--header-text);
+    }
+
+    .add {
+      background-color: var(--green);
+      cursor: pointer;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      width: 100%;
+      color: var(--white);
+      font-family: "montserrat";
+      font-weight: 700;
+      display: flex;
+      margin-bottom: 10px;
+    }
+
+    @media only screen and (min-width: 1000px) {
+      #video {
+        width: 70%;
+      }
+
+      .product-cards {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header">
+    <nav id="nav-bar">
+      <div class="logo-container">
+        <img src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/grocery-store-logo-design-template-26efc5e6e40131b8138308aed1bb075b_screen.jpg?ts=1599902810" alt="logo" width="60" id="header-img" />
+        <span class="the-product">Liwag's Market Mall</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#shopping" class="nav-link">Shopping</a></li>
+        <li><a href="#promo" class="nav-link">Promos</a></li>
+        <li><a href="#big_sale" class="nav-link">Big Sale</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="email-section">
+    <h2>Want to know us more?</h2>
+    <form action="https://www.freecodecamp.com/email-submit" id="form">
+      <input type="email" id="email" required placeholder="Enter your email address" name="email" />
+      <input type="submit" id="submit" value="GET STARTED" />
+    </form>
+  </section>
+  <section id="features">
+    <div class="feature">
+      <i class="ri-store-3-fill ri-4x icon"></i>
+      <div>
+        <h2>Our New Products</h2>
+        <p>Always comes fresh and the best people's choice</p>
+      </div>
+    </div>
+    <div class="feature">
+      <i class="ri-apple-line ri-4x icon"></i>
+      <div>
+        <h2>Get healthy Grocery Available</h2>
+        <p>Filling carts with price-savvy, healthy household staples</p>
+      </div>
+    </div>
+    <div class="feature">
+      <i class="ri-eye-line ri-4x icon"></i>
+      <div>
+        <h2>Vision</h2>
+        <p>To be the supermarket of choice known for fresh and healthy food, clean hygienic stores, competitive prices, and excellent customer service.</p>
+      </div>
+    </div>
+  </section>
+  <section id="audio">
+    <iframe id="video" width="560" height="400" src="https://www.youtube.com/embed/jnLy0IFh5G8?si=UXr2FrhvjJ1Xo5hj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </section>
+
+  <section id="shop_now">
+    <h2>Shop Now</h2>
+    <div class="product-cards">
+      <div class="card">
+        <div class="product-image product1"></div>
+        <div class="inner-card">
+          <div class="food">Standard Salmon</div>
+          <h1 class="header">Gold Standard Smoked Salmon Slices 100g</h1>
+          <p class="content">Spice up your weekend with Gold Standard Peppered Manuka smoked salmon slices.</p>
+          <div class="flex">
+            <p class="main-price">P329.00</p>
+            <p class="old-price">P499.00</p>
+          </div>
+          <button class="add">
+            <p style="margin-left: 5px">Add to Cart</p>
+          </button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="product-image product2"></div>
+        <div class="inner-card">
+          <div class="food">Radish Sauce</div>
+          <h1 class="header">Colman's Horse Radish Sauce 250mL</h1>
+          <p class="content">Colman's Horseradish Sauce is a condiment made in Britain with freshly grated horseradish.</p>
+          <div class="flex">
+            <p class="main-price">P109.00</p>
+            <p class="old-price">P199.00</p>
+          </div>
+          <button class="add">
+            <p style="margin-left: 5px">Add to Cart</p>
+          </button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="product-image product3"></div>
+        <div class="inner-card">
+          <div class="food">Wagyu Beef Burger Patties</div>
+          <h1 class="header">Aussie Wagyu Beef Burger Patties Unseasoned (1kg)</h1>
+          <p class="content">Wagyu beef is known for its intense marbling, which gives it a unique flavor and texture. Wagyu beef is also tender and moist due to its high fat ratio.</p>
+          <div class="flex">
+            <p class="main-price">P699.00</p>
+            <p class="old-price">P999.00</p>
+          </div>
+          <button class="add">
+            <p style="margin-left: 5px">Add to Cart</p>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
