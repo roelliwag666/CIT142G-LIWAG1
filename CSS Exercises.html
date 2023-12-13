@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      padding: 20px;
+      border: 2px solid black;
+      display: inline-block;
+    }
+
+    #box1 {
+      background-color: red;
+    }
+
+    #box2 {
+      background-color: green;
+    }
+
+    #box3 {
+      background-color: blue;
+    }
+  </style>
+  <title>Three Boxes</title>
+</head>
+<body>
+  <div class="box" id="box1">Box 1</div>
+  <div class="box" id="box2">Box 2</div>
+  <div class="box" id="box3">Box 3</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            width: 300px; 
+            height: 200px; 
+            border: 1px solid #ccc; 
+            position: relative; 
+        }
+
+        
+        .centered-content {
+            position: absolute; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+        }
+    </style>
+    <title>Centering Elements</title>
+</head>
+<body>
+    <div class="container">
+        <div class="centered-content">
+            
+            <p>This is centered content.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 10px;
+      background-color: lightblue;
+      border: 1px solid #333;
+      float: left; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">Box 1</div>
+  <div class="box">Box 2</div>
+  <div class="box">Box 3</div>
+
+  <div class="clearfix"></div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        main {
+            padding: 1em;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+        }
+
+        @media screen and (max-width: 600px) {
+            header {
+                font-size: 1.5em;
+            }
+
+            main {
+                padding: 0.5em;
+            }
+
+            footer {
+                font-size: 0.8em;
+            }
+        }
+    </style>
+    <title>Responsive Webpage</title>
+</head>
+<body>
+
+    <header>
+        <h1>Roel Liwag Website</h1>
+    </header>
+
+    <main>
+        <p>Your webpage content goes here.</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Website. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Navigation</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        @media screen and (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav a {
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px; 
+    }
+    
+    .grid-item {
+      padding: 20px;
+      border: 1px solid #ddd;
+      text-align: center;
+    }
+  </style>
+  <title>Grid Layout Example</title>
+</head>
+<body>
+
+  <section class="grid-container">
+
+    <div class="grid-item">Item 1</div>
+    <div class="grid-item">Item 2</div>
+    <div class="grid-item">Item 3</div>
+    <div class="grid-item">Item 4</div>
+    <div class="grid-item">Item 5</div>
+    <div class="grid-item">Item 6</div>
+  </section>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complex Layout</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      grid-template-columns: auto 1fr;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      grid-column: span 2;
+      background-color: #333;
+      color: white;
+      padding: 1em;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+    }
+
+    main {
+      display: flex;
+    }
+
+    aside {
+      width: 200px;
+      background-color: #eee;
+      padding: 1em;
+    }
+
+    article {
+      flex: 1;
+      padding: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>Header</h1>
+    </header>
+
+    <aside>
+      <h2>Sidebar</h2>
+    </aside>
+
+    <main>
+      <article>
+        <h2>Main Content Area</h2>
+      </article>
+    </main>
+
+    <footer>
+      <p>Footer</p>
+    </footer>
+  </div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            width: 300px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-description {
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        .card-footer {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .author-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .author-img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .author-name {
+            font-size: 0.8em;
+        }
+
+        .published-date {
+            font-size: 0.8em;
+            color: #888;
+        }
+    </style>
+    <title>Card Layout</title>
+</head>
+<body>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Card Image">
+        <div class="card-content">
+            <div class="card-title">Article Title</div>
+            <div class="card-description">A passion like no other.</div>
+            <div class="card-footer">
+                <div class="author-info">
+                    <img class="author-img" src="https://via.placeholder.com/30" alt="Author Image">
+                    <div class="author-name">John Doe</div>
+                </div>
+                <div class="published-date">Published on December 13, 2023</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+    
+        .parent-box {
+            width: 300px;
+            height: 300px;
+            background-color: #3498db;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .child-box {
+            width: 100%;
+            height: 100%;
+            background-color: #2ecc71;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .grandchild-box {
+            width: 100%;
+            height: 100%;
+            background-color: #dc143c;
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+    <title>Nested Elements Exercise</title>
+</head>
+<body>
+
+    <div class="parent-box">
+        <p>This is the parent box.</p>
+
+        <div class="child-box">
+            <p>This is the child box.</p>
+
+            <div class="grandchild-box">
+                <p>This is the grandchild box.</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
